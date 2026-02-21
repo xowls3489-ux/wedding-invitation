@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="김태진과 박영경의 결혼식에 소중한 분들을 초대합니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="태진 & 영경" />
+    <meta
+      property="og:description"
+      content="2026년 11월 14일 토요일 오전 11시, 그랜드모먼트 6층 시그니처홀"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>태진 & 영경</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ── Scroll Progress ── -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ── Intro — 3-Slide Cinematic ── -->
+    <div class="intro" id="intro">
+      <!-- Skip button -->
+      <button class="intro-skip" id="introSkip" type="button">건너뛰기</button>
+      <!-- Slide 1 -->
+      <div class="intro-slide" data-slide="0">
+        <img class="intro-slide-photo" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="" />
+        <div class="intro-slide-gradient"></div>
+        <div class="intro-slide-text intro-slide-text--center">
+          <p class="intro-slide-label">Wedding Invitation</p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="intro-slide" data-slide="1">
+        <img class="intro-slide-photo" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=80" alt="" />
+        <div class="intro-slide-gradient"></div>
+        <div class="intro-slide-text intro-slide-text--center">
+          <h1 class="intro-slide-names">태진 <span class="intro-slide-amp">&</span> 영경</h1>
+        </div>
+      </div>
+      <!-- Slide 3 — date typography -->
+      <div class="intro-slide" data-slide="2">
+        <img class="intro-slide-photo" src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80" alt="" />
+        <div class="intro-slide-gradient intro-slide-gradient--light"></div>
+        <div class="intro-slide-typo">
+          <span class="typo-corner typo-tl">SIMPLY</span>
+          <span class="typo-corner typo-tr">MEANT</span>
+          <div class="typo-date">
+            <span class="typo-date-line">26</span>
+            <span class="typo-date-line">11</span>
+            <span class="typo-date-line">14</span>
+          </div>
+          <span class="typo-corner typo-bl">TO BE</span>
+          <span class="typo-corner typo-br">TOGETHER</span>
+        </div>
+      </div>
+      <!-- Enter button (over slide 3) -->
+      <button class="intro-enter" id="introEnter" type="button">
+        <span class="intro-enter-text">초대장 열기</span>
+        <span class="intro-enter-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- ── Film Grain + Light Leak ── -->
+    <div class="film-grain" aria-hidden="true"></div>
+    <div class="light-leak" aria-hidden="true">
+      <div class="light-leak-ray light-leak-ray--1"></div>
+      <div class="light-leak-ray light-leak-ray--2"></div>
+    </div>
+
+    <!-- ── Hero ── -->
+    <header class="hero section" id="top">
+      <div class="hero-photo-frame reveal">
+        <img
+          class="hero-photo"
+          src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80"
+          alt="메인 사진"
+          loading="eager"
+        />
+      </div>
+      <div class="hero-text">
+        <p class="hero-eyebrow cascade" data-delay="0">We are getting married</p>
+        <h1 class="hero-couple cascade" data-delay="1">
+          <span class="hero-name">김태진</span>
+          <span class="hero-dot"></span>
+          <span class="hero-name">박영경</span>
+        </h1>
+        <p class="hero-info cascade" data-delay="2">2026년 11월 14일 토요일 오전 11시</p>
+        <p class="hero-venue cascade" data-delay="3">그랜드모먼트 6층 시그니처홀</p>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ── Greeting ── -->
+      <section class="section greeting" id="greeting">
+        <div class="section-inner reveal">
+
+          <!-- Floral line art — top -->
+          <div class="lineart lineart-top" aria-hidden="true">
+            <svg class="lineart-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- center stem -->
+              <path class="lineart-path" d="M100 118 C100 90 100 70 100 50" stroke="currentColor" stroke-width="0.8"/>
+              <!-- left branch -->
+              <path class="lineart-path" d="M100 80 C85 72 68 68 55 72" stroke="currentColor" stroke-width="0.7"/>
+              <!-- left leaf -->
+              <path class="lineart-path" d="M55 72 C48 60 42 55 38 58 C34 61 38 70 50 74 C52 74.5 54 73.5 55 72Z" stroke="currentColor" stroke-width="0.6"/>
+              <!-- right branch -->
+              <path class="lineart-path" d="M100 80 C115 72 132 68 145 72" stroke="currentColor" stroke-width="0.7"/>
+              <!-- right leaf -->
+              <path class="lineart-path" d="M145 72 C152 60 158 55 162 58 C166 61 162 70 150 74 C148 74.5 146 73.5 145 72Z" stroke="currentColor" stroke-width="0.6"/>
+              <!-- left upper branch -->
+              <path class="lineart-path" d="M100 62 C88 56 75 54 65 56" stroke="currentColor" stroke-width="0.6"/>
+              <!-- left upper leaf (small) -->
+              <path class="lineart-path" d="M65 56 C60 49 57 46 55 48 C53 50 56 55 63 57.5 C64 57.8 64.5 57 65 56Z" stroke="currentColor" stroke-width="0.5"/>
+              <!-- right upper branch -->
+              <path class="lineart-path" d="M100 62 C112 56 125 54 135 56" stroke="currentColor" stroke-width="0.6"/>
+              <!-- right upper leaf (small) -->
+              <path class="lineart-path" d="M135 56 C140 49 143 46 145 48 C147 50 144 55 137 57.5 C136 57.8 135.5 57 135 56Z" stroke="currentColor" stroke-width="0.5"/>
+              <!-- center bud -->
+              <path class="lineart-path" d="M100 50 C96 42 94 32 96 24 C98 18 100 16 100 16 C100 16 102 18 104 24 C106 32 104 42 100 50Z" stroke="currentColor" stroke-width="0.7"/>
+              <!-- bud left petal -->
+              <path class="lineart-path" d="M100 38 C94 30 88 26 86 28 C84 30 88 36 96 40" stroke="currentColor" stroke-width="0.5"/>
+              <!-- bud right petal -->
+              <path class="lineart-path" d="M100 38 C106 30 112 26 114 28 C116 30 112 36 104 40" stroke="currentColor" stroke-width="0.5"/>
+            </svg>
+          </div>
+
+          <div class="greeting-quote">
+            <p class="text-line">긴 계절을 함께 걸으며</p>
+            <p class="text-line">서로의 온도를 알아간 두 사람,</p>
+            <p class="text-line">이제 하나의 지붕 아래 살려 합니다.</p>
+          </div>
+          <div class="greeting-body">
+            <p class="text-line">좋은 것도 어려운 것도</p>
+            <p class="text-line">나누며 살겠다는 약속을 드리는 자리에</p>
+            <p class="text-line">가까이 와서 지켜봐 주시면</p>
+            <p class="text-line">큰 힘이 되겠습니다.</p>
+          </div>
+
+          <!-- Floral line art — bottom (leaves only, smaller) -->
+          <div class="lineart lineart-bottom" aria-hidden="true">
+            <svg class="lineart-svg" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- center dot -->
+              <circle class="lineart-path" cx="80" cy="20" r="1.5" stroke="currentColor" stroke-width="0.6"/>
+              <!-- left vine -->
+              <path class="lineart-path" d="M76 20 C60 18 45 14 30 18" stroke="currentColor" stroke-width="0.6"/>
+              <!-- left small leaf -->
+              <path class="lineart-path" d="M45 16 C40 10 36 9 35 11 C34 13 38 16 44 17" stroke="currentColor" stroke-width="0.5"/>
+              <!-- left end leaf -->
+              <path class="lineart-path" d="M30 18 C24 12 20 10 18 12 C16 14 20 19 28 20 C29 20 30 19 30 18Z" stroke="currentColor" stroke-width="0.5"/>
+              <!-- right vine -->
+              <path class="lineart-path" d="M84 20 C100 18 115 14 130 18" stroke="currentColor" stroke-width="0.6"/>
+              <!-- right small leaf -->
+              <path class="lineart-path" d="M115 16 C120 10 124 9 125 11 C126 13 122 16 116 17" stroke="currentColor" stroke-width="0.5"/>
+              <!-- right end leaf -->
+              <path class="lineart-path" d="M130 18 C136 12 140 10 142 12 C144 14 140 19 132 20 C131 20 130 19 130 18Z" stroke="currentColor" stroke-width="0.5"/>
+            </svg>
+          </div>
+
+          <div class="family-info">
+            <p class="family-row">
+              <span class="family-parent">김명길 · 이애란</span>
+              <span class="family-relation">의 아들</span>
+              <span class="family-child">태진</span>
+            </p>
+            <p class="family-row">
+              <span class="family-parent">박갑순 · 강자영</span>
+              <span class="family-relation">의 딸</span>
+              <span class="family-child">영경</span>
+            </p>
+          </div>
+          <button class="btn-contact" id="contactOpen" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            연락하기
+          </button>
+        </div>
+      </section>
+
+      <!-- ── Photo ── -->
+      <section class="section alt-bg" id="gallery">
+        <div class="section-inner reveal">
+          <p class="section-label">Gallery</p>
+          <h2 class="section-title clip-reveal">Our Moments</h2>
+          <div class="gallery" id="galleryGrid">
+            <button class="gallery-item stagger" data-index="0">
+              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0d799?auto=format&fit=crop&w=900&q=80" alt="사진 1" loading="lazy"/>
+            </button>
+            <button class="gallery-item stagger" data-index="1">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="사진 2" loading="lazy"/>
+            </button>
+            <button class="gallery-item tall stagger" data-index="2">
+              <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=80" alt="사진 3" loading="lazy"/>
+            </button>
+            <button class="gallery-item stagger" data-index="3">
+              <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=900&q=80" alt="사진 4" loading="lazy"/>
+            </button>
+            <button class="gallery-item stagger" data-index="4">
+              <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80" alt="사진 5" loading="lazy"/>
+            </button>
+            <button class="gallery-item wide stagger" data-index="5">
+              <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="사진 6" loading="lazy"/>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Calendar & Schedule ── -->
+      <section class="section" id="schedule">
+        <div class="section-inner reveal">
+          <p class="section-label">Schedule</p>
+          <h2 class="section-title clip-reveal">예식 안내</h2>
+
+          <!-- Ring line art -->
+          <div class="lineart lineart-rings" aria-hidden="true">
+            <svg class="lineart-svg" viewBox="0 0 120 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse class="lineart-path" cx="45" cy="25" rx="22" ry="18" stroke="currentColor" stroke-width="0.7"/>
+              <ellipse class="lineart-path" cx="75" cy="25" rx="22" ry="18" stroke="currentColor" stroke-width="0.7"/>
+            </svg>
+          </div>
+
+          <div class="schedule-grid">
+            <div class="schedule-card">
+              <p class="schedule-label">일시</p>
+              <p class="schedule-value" id="weddingDateInfo">2026.11.14 (토) AM 11:00</p>
+            </div>
+            <div class="schedule-card">
+              <p class="schedule-label">장소</p>
+              <p class="schedule-value" id="venueInfo">그랜드모먼트 6층 시그니처홀</p>
+            </div>
+            <div class="schedule-card full">
+              <p class="schedule-label">주소</p>
+              <p class="schedule-value" id="addressInfo">부산광역시 남구 황령대로 401-9 그랜드모먼트</p>
+              <button class="btn-copy" data-copy="부산광역시 남구 황령대로 401-9 그랜드모먼트" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                </svg>
+                주소 복사
+              </button>
+            </div>
+          </div>
+
+          <div class="calendar-section">
+            <div class="calendar-header">
+              <span class="calendar-month" id="calendarMonthLabel">2026년 11월</span>
+              <span class="calendar-dday" id="countdownText">D-000</span>
+            </div>
+            <div class="calendar">
+              <div class="calendar-weekdays">
+                <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+              </div>
+              <div class="calendar-days" id="calendarDays"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Location ── -->
+      <section class="section alt-bg" id="location">
+        <div class="section-inner reveal">
+          <p class="section-label">Location</p>
+          <h2 class="section-title clip-reveal">오시는 길</h2>
+          <div class="map-wrap">
+            <iframe
+              title="예식장 위치"
+              loading="lazy"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15519.595411510192!2d129.10197897354684!3d35.14182799680965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eda04b864ae5%3A0x84aefd9d9216c29a!2z6re4656c65OcIOuqqOuovO2KuA!5e0!3m2!1sko!2skr!4v1713774788475!5m2!1sko!2skr"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="map-buttons">
+            <a class="btn-map" href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%82%A8%EA%B5%AC%20%ED%99%A9%EB%A0%B9%EB%8C%80%EB%A1%9C%20401-9%20%EA%B7%B8%EB%9E%9C%EB%93%9C%EB%AA%A8%EB%A8%BC%ED%8A%B8" target="_blank" rel="noreferrer">
+              네이버지도
+            </a>
+            <a class="btn-map" href="https://map.kakao.com/link/search/%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%82%A8%EA%B5%AC%20%ED%99%A9%EB%A0%B9%EB%8C%80%EB%A1%9C%20401-9%20%EA%B7%B8%EB%9E%9C%EB%93%9C%EB%AA%A8%EB%A8%BC%ED%8A%B8" target="_blank" rel="noreferrer">
+              카카오맵
+            </a>
+            <a class="btn-map" href="https://maps.app.goo.gl/fZaWFRB1ETcqoAhK6" target="_blank" rel="noreferrer">
+              구글맵
+            </a>
+          </div>
+          <div class="transport">
+            <div class="transport-item">
+              <span class="transport-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="18" height="14" rx="2"/>
+                  <path d="M3 10h18M8 21l2-4M16 21l-2-4"/>
+                </svg>
+              </span>
+              <div>
+                <strong>셔틀버스</strong>
+                <p>남천역 4번 출구 탑승, 15분 간격 운행</p>
+              </div>
+            </div>
+            <div class="transport-item">
+              <span class="transport-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="1" y="3" width="15" height="13" rx="2"/>
+                  <path d="M16 8h4l3 3v5h-7V8zM5.5 18a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 18a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/>
+                </svg>
+              </span>
+              <div>
+                <strong>자가용</strong>
+                <p>그랜드모먼트 건물 내 주차장 이용</p>
+              </div>
+            </div>
+            <div class="transport-item">
+              <span class="transport-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
+              <div>
+                <strong>버스</strong>
+                <p>황령대로 인근 정류장 하차 후 도보 이동</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Account ── -->
+      <section class="section" id="account">
+        <div class="section-inner reveal">
+          <p class="section-label">Gift</p>
+          <h2 class="section-title clip-reveal">마음 전하실 곳</h2>
+
+          <!-- Gift box line art -->
+          <div class="lineart lineart-gift" aria-hidden="true">
+            <svg class="lineart-svg" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- ribbon -->
+              <path class="lineart-path" d="M40 10 C30 10 22 4 22 4 C22 4 30 0 40 8" stroke="currentColor" stroke-width="0.7"/>
+              <path class="lineart-path" d="M40 10 C50 10 58 4 58 4 C58 4 50 0 40 8" stroke="currentColor" stroke-width="0.7"/>
+              <!-- box top -->
+              <rect class="lineart-path" x="10" y="10" width="60" height="14" rx="2" stroke="currentColor" stroke-width="0.7"/>
+              <!-- box body -->
+              <rect class="lineart-path" x="14" y="24" width="52" height="38" rx="2" stroke="currentColor" stroke-width="0.7"/>
+              <!-- center line -->
+              <line class="lineart-path" x1="40" y1="10" x2="40" y2="62" stroke="currentColor" stroke-width="0.7"/>
+            </svg>
+          </div>
+
+          <div class="account-grid">
+            <div class="account-accordion">
+              <button class="account-toggle" type="button" aria-expanded="false">
+                <span class="account-badge">신랑측</span>
+                <svg class="account-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </button>
+              <div class="account-panel">
+                <div class="account-card">
+                  <p class="account-detail">우리은행</p>
+                  <p class="account-number">1002-052-500195</p>
+                  <p class="account-name">김태진</p>
+                  <button class="btn-copy" data-copy="우리은행 1002-052-500195 김태진" type="button">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                    </svg>
+                    계좌 복사
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="account-accordion">
+              <button class="account-toggle" type="button" aria-expanded="false">
+                <span class="account-badge">신부측</span>
+                <svg class="account-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"/>
+                </svg>
+              </button>
+              <div class="account-panel">
+                <div class="account-card">
+                  <p class="account-detail">신한은행</p>
+                  <p class="account-number">110-345-678901</p>
+                  <p class="account-name">박영경</p>
+                  <button class="btn-copy" data-copy="신한은행 110-345-678901 박영경" type="button">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                    </svg>
+                    계좌 복사
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── RSVP ── -->
+      <section class="section alt-bg" id="rsvp">
+        <div class="section-inner reveal">
+          <p class="section-label">RSVP</p>
+          <h2 class="section-title clip-reveal">참석의사 전달</h2>
+          <p class="rsvp-desc">참석 여부를 알려주시면 식사 및 좌석 준비에 큰 도움이 됩니다.</p>
+          <form class="rsvp-form" id="rsvpForm">
+            <div class="form-field">
+              <label for="rsvpName">성함</label>
+              <input type="text" id="rsvpName" name="name" placeholder="홍길동" required />
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="rsvpSide">구분</label>
+                <select id="rsvpSide" name="side" required>
+                  <option value="">선택</option>
+                  <option value="신랑측">신랑측</option>
+                  <option value="신부측">신부측</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="rsvpAttending">참석 여부</label>
+                <select id="rsvpAttending" name="attending" required>
+                  <option value="">선택</option>
+                  <option value="참석">참석</option>
+                  <option value="불참">불참</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="rsvpGuests">인원</label>
+                <input type="number" id="rsvpGuests" name="guests" min="0" max="10" value="1" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="rsvpMessage">축하 메시지</label>
+              <textarea id="rsvpMessage" name="message" rows="3" placeholder="전하고 싶은 말을 적어주세요"></textarea>
+            </div>
+            <button class="btn-submit" type="submit">참석의사 복사하기</button>
+            <p class="rsvp-feedback" id="rsvpFeedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── Share ── -->
+    <section class="section" id="share">
+      <div class="section-inner share-area">
+        <p class="share-message">소중한 분들에게 공유해 주세요</p>
+        <div class="share-buttons">
+          <button class="btn-share" id="shareNative" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/>
+            </svg>
+            공유하기
+          </button>
+          <button class="btn-share" id="shareCopy" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+            </svg>
+            링크 복사
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+      <div class="footer-ornament" aria-hidden="true">
+        <svg width="40" height="14" viewBox="0 0 40 14">
+          <path d="M0 7 Q10 0 20 7 Q30 14 40 7" fill="none" stroke="currentColor" stroke-width="0.6"/>
+        </svg>
+      </div>
+      <p class="footer-names">태진 & 영경</p>
+      <p class="footer-date">2026. 11. 14</p>
+    </footer>
+
+    <!-- ── Bottom Nav ── -->
+    <nav class="bottom-nav" id="bottomNav" aria-label="빠른 메뉴">
+      <a href="#greeting" data-section="greeting">인사말</a>
+      <a href="#gallery" data-section="gallery">갤러리</a>
+      <a href="#schedule" data-section="schedule">예식</a>
+      <a href="#location" data-section="location">오시는 길</a>
+      <a href="#rsvp" data-section="rsvp">참석</a>
+    </nav>
+
+    <!-- ── Lightbox ── -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="닫기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+      <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" type="button" aria-label="이전">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      <img id="lightboxImage" src="" alt="확대 이미지" />
+      <button class="lightbox-arrow lightbox-next" id="lightboxNext" type="button" aria-label="다음">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- ── Contact Modal ── -->
+    <div class="modal-overlay" id="contactModal" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <h3 id="modalTitle">연락처</h3>
+          <button class="modal-close" id="contactClose" type="button" aria-label="닫기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="contact-section">
+            <h4 class="contact-side">신랑측</h4>
+            <div class="contact-person">
+              <div class="contact-info">
+                <span class="contact-role">신랑</span>
+                <span class="contact-name">김태진</span>
+              </div>
+              <div class="contact-actions">
+                <a class="contact-btn" href="tel:01093713498" aria-label="신랑에게 전화">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </a>
+                <a class="contact-btn" href="sms:01093713498" aria-label="신랑에게 문자">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="contact-person">
+              <div class="contact-info">
+                <span class="contact-role">아버지</span>
+                <span class="contact-name">김명길</span>
+              </div>
+              <div class="contact-actions">
+                <a class="contact-btn" href="tel:01035973699" aria-label="신랑 아버지에게 전화">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </a>
+                <a class="contact-btn" href="sms:01035973699" aria-label="신랑 아버지에게 문자">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="contact-person">
+              <div class="contact-info">
+                <span class="contact-role">어머니</span>
+                <span class="contact-name">이애란</span>
+              </div>
+              <div class="contact-actions">
+                <a class="contact-btn" href="tel:01033833489" aria-label="신랑 어머니에게 전화">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </a>
+                <a class="contact-btn" href="sms:01033833489" aria-label="신랑 어머니에게 문자">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-section">
+            <h4 class="contact-side">신부측</h4>
+            <div class="contact-person">
+              <div class="contact-info">
+                <span class="contact-role">신부</span>
+                <span class="contact-name">박영경</span>
+              </div>
+              <div class="contact-actions">
+                <a class="contact-btn" href="tel:01056146780" aria-label="신부에게 전화">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </a>
+                <a class="contact-btn" href="sms:01056146780" aria-label="신부에게 문자">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="contact-person">
+              <div class="contact-info">
+                <span class="contact-role">아버지</span>
+                <span class="contact-name">박갑순</span>
+              </div>
+              <div class="contact-actions">
+                <a class="contact-btn" href="tel:010XXXXYYYY" aria-label="신부 아버지에게 전화">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </a>
+                <a class="contact-btn" href="sms:010XXXXYYYY" aria-label="신부 아버지에게 문자">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="contact-person">
+              <div class="contact-info">
+                <span class="contact-role">어머니</span>
+                <span class="contact-name">강자영</span>
+              </div>
+              <div class="contact-actions">
+                <a class="contact-btn" href="tel:010XXXXYYYY" aria-label="신부 어머니에게 전화">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0122 16.92z"/>
+                  </svg>
+                </a>
+                <a class="contact-btn" href="sms:010XXXXYYYY" aria-label="신부 어머니에게 문자">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Toast ── -->
+    <div class="toast" id="toast" hidden>
+      <span id="toastMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
